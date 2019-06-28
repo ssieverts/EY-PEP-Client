@@ -7,8 +7,8 @@
 5. Changes to the Angular piece were handled with the angular cli.
 
 **Assumptions**:
--I had to modify the schema a bit to support FKs to access Doctor collections like languages, ratings, and specialties(F5).
+1. I had to modify the schema a bit to support FKs to access Doctor collections like languages, ratings, and specialties(F5).
 
 **Comments**:
--For the sake of time I didn't implement a star rating system. Initially I inplemented a 1-100% rating system but didn't have time to go back and change it.
--I made use of the dotnet cli migrations to build the database and keep track of changes.
+1. For the sake of time I didn't implement a star rating system. Initially I inplemented a 1-100% rating system but didn't have time to go back and change it.
+2. I made use of the dotnet cli migrations to build the database and keep track of changes.
