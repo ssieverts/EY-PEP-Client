@@ -1,0 +1,24 @@
+<h1>Doctors</h1>
+
+<p>This component demonstrates doctor data from the an API.</p>
+
+<p *ngIf="!displayDoctors"><em>Loading...</em></p>
+
+<table class='table table-striped' *ngIf="displayDoctors">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Specialties</th>
+      <th>Avg. Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let displayDoctor of displayDoctors">
+      <td><a [routerLink]="['/doctor', displayDoctor.id]">{{ displayDoctor.name }}</a></td>
+      <td>{{ displayDoctor.gender }}</td>
+      <td>{{ displayDoctor.specialties }}</td>
+      <td>{{ displayDoctor.avgPatientRating }}%</td>
+    </tr>
+  </tbody>
+</table>

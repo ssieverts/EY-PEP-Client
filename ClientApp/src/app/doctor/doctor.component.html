@@ -1,0 +1,64 @@
+<h1>Doctor Details</h1>
+<div>
+  <div>
+    <!--doctor detail-->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Name:</h5>
+        <p class="card-text">{{selectedDoctor.name}}</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Gender:</h5>
+        <p class="card-text">{{selectedDoctor.gender}}</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Specialties:</h5>
+        <p class="card-text">{{selectedDoctor.specialties}}</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Avg. Patient Rating:</h5>
+        <p class="card-text">{{selectedDoctor.avgPatientRating}}%<span class="green" *ngIf="selectedDoctor.avgPatientRating > 85 "> SUPER STAR </span></p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Lanuages Spoken:</h5>
+        <p class="card-text">{{selectedDoctor.languages}}</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Medical School</h5>
+        <p class="card-text">{{selectedDoctor.medicalSchool}}</p>
+      </div>
+    </div>
+
+
+
+  </div>
+  <!--patient reviews-->
+
+  <h3>Reviews</h3>
+  <div class="col-md-6 col-md-offset-6">
+    <table class='table table-striped' *ngIf="selectedDoctor">
+      <thead>
+        <tr>
+          <th>Comment</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rating of selectedDoctor.ratings">
+          <td>{{ rating.comments }}</td>
+          <td>{{ rating.rating }}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
